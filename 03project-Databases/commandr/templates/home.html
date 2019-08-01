@@ -152,26 +152,16 @@ input[type=radio]:checked ~ label{
 	<h2>Important commands to remember</h2>
 
   <ul>
+    {% for c in object_list %}
   <li>
     <input type="radio" id="f-option" name="selector">
     <label for="f-option">cd - Change Directory</label>
 
     <div class="check"></div>
   </li>
+  {% endfor %}
 
-  <li>
-    <input type="radio" id="s-option" name="selector">
-    <label for="s-option">ls- list content</label>
 
-    <div class="check"><div class="inside"></div></div>
-  </li>
-
-  <li>
-    <input type="radio" id="t-option" name="selector">
-    <label for="t-option">mkdir - Make Directory</label>
-
-    <div class="check"><div class="inside"></div></div>
-  </li>
 </ul>
 </div>
 
