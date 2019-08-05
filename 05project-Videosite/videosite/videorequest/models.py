@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class Video(models.Model):
-    videotitle = models.CharField(max_length=20)
+    videotitle = models.CharField(max_length=30)
     videodescr = models.TextField()
     date_added = models.DateTimeField(default=timezone.now)
 
