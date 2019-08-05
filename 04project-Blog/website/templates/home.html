@@ -5,7 +5,7 @@
 {% for a in object_list %}
 
 <div class="article">
-  <h3><a href="#">{{ a.title }}</a></h3>
+  <h3><a href="{% url 'detail' article.pk %}">{{ a.title }}</a></h3>
   <p>{{ a.text }}</p>
 </div>
 
