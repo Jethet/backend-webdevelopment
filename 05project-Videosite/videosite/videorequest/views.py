@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Video
 from .forms import VideoForm
 
@@ -9,4 +9,13 @@ def index(request):
 
 
 def vrform(request):
+    if request.method == 'POST':
+        form = VideoForm(request.POST)
+
+        if form.is_valid():
+            new_req = Video(videotitle=request.POST['videoname'], videodesc=request.POST['videodesc'])
+            new_req.save()
+            return redirect('index')
+
+
     return render(request, 'videorequest/vrform.html')
