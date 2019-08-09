@@ -2,5 +2,13 @@
 
 {% block content %}
 
+<h1>You can edit your posts here.</h1>
+
+<form class="" action="" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+
+  <input type="submit" name="" value="Update">
+</form>
 
 {% end block %}
