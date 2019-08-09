@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Video
+from .forms import VideoForm
 
 def index(request):
     videos = Video.objects.order_by('-date_added')
