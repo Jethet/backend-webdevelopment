@@ -10,3 +10,6 @@ class ArticleDetailView(DetailView):
     model = Article
     template_name = 'detail.html'
     context_object_name = 'post'
+
+class ArticleCreateView(ListView):
+    template_name = 'home.html'
