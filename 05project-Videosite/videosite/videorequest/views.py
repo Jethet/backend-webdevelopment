@@ -17,5 +17,9 @@ def vrform(request):
             new_req.save()
             return redirect('index')
 
+    else:
+        form = VideoForm()
 
-    return render(request, 'videorequest/vrform.html')
+    context = {'form': form}
+    
+    return render(request, 'videorequest/vrform.html', context)
