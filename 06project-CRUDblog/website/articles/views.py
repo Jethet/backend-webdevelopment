@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView
 from . models import Article
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 class ArticleListView(ListView):
@@ -21,3 +21,7 @@ class ArticleUpdateView(UpdateView):
     model = Article
     template_name = 'article_edit.html'
     fields = ['title', 'text']
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    template_name = 'article_delete.html'
