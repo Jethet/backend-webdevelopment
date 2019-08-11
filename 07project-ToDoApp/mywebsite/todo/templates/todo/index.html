@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,8 +11,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./css/flatly.min.css" />
-		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="{% url 'static/todo/css/flatly.min.css%' %}" />
+		<link rel="stylesheet" href="{% url 'static/todo/css/styles.css%' %}" />
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 
@@ -66,12 +68,6 @@
 				</div>
 			</div>
 
-
 		</div>
-
-		<!-- jQuery -->
-		<script src="./js/jquery.min.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="./js/bootstrap.min.js"></script>
 	</body>
 </html>
