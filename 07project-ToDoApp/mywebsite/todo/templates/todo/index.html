@@ -14,20 +14,14 @@
 		<link rel="stylesheet" href="{% static '/todo/css/flatly.min.css' %}" />
 		<link rel="stylesheet" href="{% static '/todo/css/styles.css' %}" />
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-
-
-
 	</head>
-	<body>
 
+	<body>
 		<div class="container-fluid" id="wrapper">
 
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
-					<h2>Your Todo List <i class="fas fa-pencil-alt"></i>
-
-</h2>
+					<h2>Your Todo List <i class="fas fa-pencil-alt"></i></h2>
 
 					<form action="{% url 'add' %}" method="POST" role="form">
 						{% csrf_token %}
@@ -62,7 +56,7 @@
 
 					<ul class="list-group t20">
 						{% for t in mytodo %}
-							{% if to.complete %}
+							{% if t.complete %}
 								<li class="list-group-item todo-completed">{{ t.todotext }}</li>
 							{% else %}
 								<a href="{% url 'complete' t.id %}"><li class="list-group-item">{{ t.todotext }}</li></a>
