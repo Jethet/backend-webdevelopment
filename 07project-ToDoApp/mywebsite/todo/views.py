@@ -31,3 +31,9 @@ def completeTodo(request, todo_id):
 def deleteTodo(request):
     Todo.objects.filter(complete__exact=True).delete()
     return redirect('index')
+
+def resetTodo(request):
+    mytodo = Todo.objects.order_by('id')
+    for x in mytodo:
+        del x
+    return redirect('index')
