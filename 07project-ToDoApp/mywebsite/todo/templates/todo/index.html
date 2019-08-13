@@ -65,23 +65,14 @@
 							{% if to.complete %}
 								<li class="list-group-item todo-completed">{{ t.todotext }}</li>
 							{% else %}
-								<a href="{% rl 'complete' t.id %}"><li class="list-group-item">{{ t.todotext }}</li></a>
+								<a href="{% url 'complete' t.id %}"><li class="list-group-item">{{ t.todotext }}</li></a>
 							{% endif %}
 						{% endfor %}
-
-
-
-
-						<li class="list-group-item">Go to swimming</li>
 					</ul>
 				</div>
 			</div>
 
 		</div>
-		<script src="./js/jquery.min.js">
-		</script>
-		<script src="./js/bootstrap.min.js">
 
-		</script>
 	</body>
 </html>
