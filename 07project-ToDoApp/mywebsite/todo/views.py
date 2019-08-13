@@ -34,6 +34,5 @@ def deleteTodo(request):
 
 def resetTodo(request):
     mytodo = Todo.objects.order_by('id')
-    for x in mytodo:
-        del x
+    del mytodo
     return redirect('index')
